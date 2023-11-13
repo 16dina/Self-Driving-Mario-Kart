@@ -1,8 +1,8 @@
-from mss import mss
+import mss.tools
 
 with mss.mss() as sct:
     # The screen part to capture
-    monitor = {"top": 160, "left": 160, "width": 160, "height": 135}
+    monitor = {"top": 400, "left": 0, "width": 1050, "height": 300}
     output = "sct-{top}x{left}_{width}x{height}.png".format(**monitor)
 
     # Grab the data
