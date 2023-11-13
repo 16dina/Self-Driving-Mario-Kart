@@ -10,7 +10,8 @@ with mss.mss() as sct:
     top_margin = monitor_info["height"] // 3
     monitor = {"top": monitor_info["top"] + top_margin, "left": monitor_info["left"] + 55, "width": monitor_info["width"] - 120, "height": (monitor_info["height"] * 2 // 3)-55}
 
-    while not keyboard.is_pressed ("esc"):
+    # hold space for a bit when you're stopping so it stops
+    while not keyboard.is_pressed("space"):
         output = f"dataset/{str(uuid.uuid4())}.png".format(**monitor)
         sct_img = sct.grab(monitor)
         mss.tools.to_png(sct_img.rgb, sct_img.size, output=output)
