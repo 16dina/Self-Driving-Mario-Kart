@@ -9,7 +9,7 @@ with mss.mss() as sct:
     monitor = {"top": monitor_info["top"] + top_margin, "left": monitor_info["left"], "width": monitor_info["width"], "height": (monitor_info["height"] * 2 // 3)-55}
 
     for i in range(1, 21):
-        output = f"{i}.png".format(**monitor)
+        output = f"samples/{i}.png".format(**monitor)
         sct_img = sct.grab(monitor)
         mss.tools.to_png(sct_img.rgb, sct_img.size, output=output)
         print(f"Captured {output}")
