@@ -18,6 +18,7 @@ DLIngrid
 datasetsingrid
 testingDataset
 model_v2_iris.h5
+model_v3_iris.h5
 my_model_v2.h5
 my_model_v3.h5
 my_model_v4.h5
